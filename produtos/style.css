@@ -49,7 +49,6 @@ header {
 
 .box_busca input {
     padding-left: 25px;
-    padding-bottom: 5px;
     background-color: transparent;
     border: none;
     border-bottom: solid 1px #747878;
@@ -79,10 +78,8 @@ header {
 /* ----------------produtos------------------*/
 
 .secao_produto {
-    /* max-width: 1920px; */
     margin: 0 auto;
     padding: 65px 20px;
-    /* background-color: #FFF7E6; */
     background-color: #F5F0E8;
 
 
@@ -104,9 +101,9 @@ header {
 
 
 .produto_imagem img {
-    width: 400px;
+    max-width: 600px;
+    width: 100%;
     border-radius: 20px;
-    /* background-color: white; */
 }
 
 
@@ -114,7 +111,8 @@ header {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
     padding: 20px 30px;
     background-color: white;
     border-radius: 20px;
@@ -170,62 +168,6 @@ header {
 
 
 /* -------------------avaliaçoes-------------------- */
-.container_avaliar {
-    display: flex;
-    flex-direction: column;
-    height: 200px;
-    font-family: var(--fontehanken);
-}
-
-.container_avaliar h3 {
-    font-size: 32px;
-    text-align: center;
-}
-
-.container_avaliar p {
-    font-size: 18px;
-    margin-bottom: 25px;
-}
-
-.avaliar_estrelas svg {
-    width: 30px;
-}
-
-.avaliar_estrelas button {
-    background: none;
-    border: none;
-    outline: none;
-    box-shadow: none;
-    cursor: pointer;
-    padding: 0;
-}
-
-.container_avaliar input {
-    max-height: 55px;
-    height: 100%;
-}
-
-.container_avaliar placeholder{
-    max-height: 55px;
-    height: 100%;
-    text-align: end;
-} 
-
-.container_avaliar button{
-    max-width: 100px;
-    width: 100%;
-}
-
-
-.avaliar {
-    background-color: white;
-    max-width: 1000px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-
 .avaliacoes {
     display: flex;
     justify-content: center;
@@ -233,16 +175,76 @@ header {
     flex-direction: column;
     align-items: center;
     background-color: #E8E2D8;
+
+    .avaliacao {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .avaliar {
+        max-width: 1000px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container_avaliar {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        font-family: var(--fontehanken);
+    }
+
+
+    .container_avaliar h3 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .container_avaliar p {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .avaliar_estrelas svg {
+        width: 30px;
+    }
+
+    .avaliar_estrelas button {
+        background: none;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .container_avaliar textarea {
+        width: 100%;
+        height: 70px;
+        box-sizing: border-box;
+        padding: 10px;
+        resize: none;
+    }
+
+    .enviar_ava {
+        max-width: 140px;
+        width: 100%;
+        background-color: #062047;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        margin-top: 10px;
+        margin: 10px auto 0;
+    }
+
+
 }
-
-.avaliacao {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-}
-
-
 
 .container_avaliacoes h2 {
     display: flex;
@@ -262,22 +264,17 @@ header {
 
 /* --------------------avaliacoes usuarios---------------------- */
 
-.avaliacoes {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
-
-
-
 
 .usuario {
-    padding: 30px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: white;
     border-radius: 15px;
-    width: 800px;
+    height: 200px;
+    max-width: 1000px;
+    width: 100%;
 }
 
 
@@ -312,6 +309,7 @@ footer {
     background-color: #FFF7E6;
     display: flex;
     justify-content: center;
+    font-family: var(--fonteterciaria)
 }
 
 
@@ -339,98 +337,173 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ----------- RESPONSIVIDADE ----------- */
 
-@media (max-width: 850px) {
 
-    header {
-        width: 100%;
-        padding: 20px 0;
+
+@media screen and (max-width: 1120px) {
+
+    .header_container {
+        width: 70%;
     }
 
-    .img img {
-        width: 90%;
+    .logo {
+        max-width: 250px;
+        width: 75%;
     }
 
-    .box_busca input {
-        width: 400px;
+    .header_container input {
+        width: 180px;
     }
 
+    .header_txt2 {
+        display: flex;
+    }
 
     .header_txt2 img {
-        width: 60px;
+        width: 50px;
     }
-
-    .sacola img {
-        width: 70px;
-    }
-
-
-
-
-
 
     .container_produto {
-        flex-direction: column;
+        width: 95%;
+    }
+
+
+    .produto_imagem {
+        margin-right: 5%;
+    }
+
+    .footer_container {
+        width: 60%;
+    }
+
+}
+
+
+@media (max-width: 822px) {
+
+    .logo {
+        width: 140px;
+    }
+
+    .box_busca {
+        width: 100%;
+        order: 3;
+        text-align: center;
+    }
+
+    .header_container input {
+        max-width: 440px;
+        width: 100%;
+    }
+
+    header {
+        height: auto;
+        padding: 16px 0;
+    }
+
+    .header_container {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+
+    .produto_imagem {
+        margin: 0 auto;
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .container_produto {
         display: flex;
         align-items: center;
-    }
-
-    .container_produto img {
-        width: 250px;
-        margin-left: 100px;
-
-    }
-
-
-    .txt_produtos {
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        width: 500px;
     }
 
-    .txt_produtos h1 {
-        font-size: 30px;
+    .footer_container img {
+        width: 140px;
     }
 
-    .txt_produtos p {
+
+    /* -----------------produtos------------ */
+    .usuario {
+        max-width: 600px;
+        width: 100%;
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .avaliacao {
+        max-width: 520px;
+        width: 100%;
+    }
+
+    .nome_usuario span {
         font-size: 14px;
     }
 
-    .categorias {
-        display: none;
+    .container_avaliacoes h2 {
+        font-size: 42px;
     }
 
-    .encomendas {
-        width: 400px;
+    .container_avaliacoes hr {
+        width: 240px;
     }
+
+    .footer_container {
+        width: 80%;
+    }
+
+    .footer_nav a {
+        font-size: 14px;
+    }
+    
+    
+    /* -------------------avaliar----------------- */
+    
+        .avaliacoes .container_avaliar h3 {
+            font-size: 24px;
+        }
+    
+        .avaliacoes .container_avaliar p {
+            font-size: 16px;
+        }
+    
+        .avaliacoes .avaliar_estrelas svg {
+            width: 20px;
+            display: flex;
+        }
+
+    .usuario {
+        height: 150px;
+        max-width: 350px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .usuario span {
+        font-size: 12px;
+        width: 200px;
+    }
+
+    .nome_usuario {
+        display: flex;
+        width: 300px;
+
+    }
+
+    .nome_usuario h3 {
+        font-size: 14px
+    }
+
+    .nome_usuario span {
+        max-width: 200px;
+        width: 100%;
+    }
+
+    
 }
