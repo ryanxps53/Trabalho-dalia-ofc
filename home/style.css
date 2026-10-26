@@ -377,7 +377,7 @@ footer {
         display: none;
     }
 
-
+/* ----------------banner------------------ */
     .texto_banner{
         max-width: 500px;
         width: 70%;
@@ -392,6 +392,8 @@ footer {
         width: 60%;
       }
 
+
+      /* ---------------footer-------------- */
 
     .footer_container img{
         max-width: 160px;

@@ -170,6 +170,60 @@ header {
 
 
 /* -------------------avaliaçoes-------------------- */
+.container_avaliar {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    font-family: var(--fontehanken);
+}
+
+.container_avaliar h3 {
+    font-size: 32px;
+    text-align: center;
+}
+
+.container_avaliar p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.avaliar_estrelas svg {
+    width: 30px;
+}
+
+.avaliar_estrelas button {
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.container_avaliar input {
+    max-height: 55px;
+    height: 100%;
+}
+
+.container_avaliar placeholder{
+    max-height: 55px;
+    height: 100%;
+    text-align: end;
+} 
+
+.container_avaliar button{
+    max-width: 100px;
+    width: 100%;
+}
+
+
+.avaliar {
+    background-color: white;
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 
 .avaliacoes {
@@ -204,21 +258,6 @@ header {
     width: 350px;
 }
 
-.avaliar {
-    background-color: white;
-    max-width: 800px;
-    width: 100%;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-
-    padding: 100px 200px;
-}
-
-
-container.avaliar {
-    width: 500px;
-}
 
 
 /* --------------------avaliacoes usuarios---------------------- */
