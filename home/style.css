@@ -31,8 +31,8 @@ header {
 
 
 .logo {
-    width: 250px;
-    height: auto;
+    width: auto;
+    height: 135px;
 }
 
 
@@ -62,8 +62,14 @@ header {
 .box_busca input:focus {
     outline: none;
     /* tira o contorno que o navegador coloca no input */
-    color: #747878;
 }
+
+
+.header_txt2{
+    display: flex;
+    gap: 10px;
+}
+
 
 
 .header_txt2 img {
@@ -74,8 +80,6 @@ header {
 .header_txt2 button {
     background: none;
     border: none;
-    outline: none;
-    box-shadow: none;
     cursor: pointer;
     padding: 0;
     font: inherit;
@@ -133,8 +137,11 @@ header {
     color: #7f8585;
 }
 
-.texto_banner button {
+.texto_banner .botao_colecao {
     position: relative;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
     padding: 15px 24px;
     background-color: #062047;
     color: white;
@@ -310,7 +317,7 @@ footer {
         margin-bottom: 15px;
     }
 
-    .texto_banner button {
+    .texto_banner .botao_colecao {
         max-width: 200px;
         font-size: 18px;
     }
@@ -410,4 +417,4 @@ footer {
     .footer_nav a{
         font-size: 14px;
     }
-}   
+}
