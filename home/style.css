@@ -8,7 +8,14 @@
     --fonteterciaria: "Montserrat", sans-serif;
     --fontejudson: "Judson", sans-serif;
     --fontehanken: "Hanken Grotesk", sans-serif;
+
+    --cinza: #747878;
+    --azul: #062047;
+    --dourado: #c9a227;
+    --creme: #FFF7E6;
 }
+
+
 
 
 
@@ -18,7 +25,6 @@ header {
     display: flex;
     justify-content: center;
     background-color: #FFF7E6;
-    margin: 0 auto;
 }
 
 .header_container {
@@ -57,6 +63,7 @@ header {
     border: none;
     border-bottom: solid 1px #747878;
     font-size: 20px;
+    font-family: var(--fontehanken);
 }
 
 .box_busca input:focus {
@@ -65,7 +72,7 @@ header {
 }
 
 
-.header_txt2{
+.header_txt2 {
     display: flex;
     gap: 10px;
 }
@@ -106,52 +113,79 @@ header {
     height: 100%;
     min-height: 500px;
     object-fit: cover;
-    margin-bottom: 10%;
 }
 
+/* o texto agora usa flex: um item embaixo do outro, com o espaco controlado pelo gap */
 .texto_banner {
-    flex-direction: column;
     position: absolute;
     top: 10%;
     left: 5%;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .texto_banner h1 {
-    position: relative;
-    bottom: 40px;
     font-size: 64px;
     font-family: var(--fontejudson);
 }
 
 .destaque {
-    color: #c9a227;
+    color: var(--dourado);
 }
 
 .texto_banner p {
-    position: relative;
     font-size: 32px;
     font-family: var(--fontehanken);
-    bottom: 20px;
     font-weight: 600;
-    color: #7f8585;
+    color: var(--cinza);
 }
 
 .texto_banner .botao_colecao {
-    position: relative;
-    display: inline-block;
     text-decoration: none;
     text-align: center;
     padding: 15px 24px;
-    background-color: #062047;
+    background-color: var(--azul);
     color: white;
     border-radius: 20px;
     font-family: var(--fontehanken);
-    top: 80%;
     font-size: 20px;
     cursor: pointer;
 }
 
+.texto_banner .botao_colecao:hover {
+    opacity: 0.85;
+}
+
+/* -----------------------sessoes--------------- */
+
+.sessoes {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    margin-left: 80px;
+}
+
+.voltar_sessao {
+    display: flex;
+    gap: 6px;
+}
+
+.sessoes a {
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--cinza);
+    font-family: var(--fontehanken);
+}
+
+.sessoes a:hover {
+    color: var(--azul);
+}
+
+.sessoes a.link_atual {
+    color: var(--azul);
+}
 
 /* -----------------------novidades--------------- */
 
@@ -163,18 +197,17 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 0;
 }
 
 .container_txtnovidades h2 {
     font-size: 48px;
     font-family: var(--fontejudson);
-    font-weight: 200;
+    font-weight: 400;
 }
 
 .container_txtnovidades hr {
     width: 346px;
-    margin-bottom: 30px;
+    margin-top: 10px;
 }
 
 
@@ -184,12 +217,11 @@ header {
 
 .container_produtos {
     display: flex;
-    margin: 200px auto 0;
+    margin: 80px auto 0;
     justify-content: space-around;
     width: 100%;
     max-width: 1920px;
     min-height: 500px;
-
 }
 
 
@@ -201,9 +233,13 @@ header {
 
 
 .produtos img {
-    display: flex;
-    flex-direction: column;
+    display: block;
     width: 300px;
+    max-width: 100%;
+}
+
+.produtos a:hover {
+    opacity: 0.85;
 }
 
 .produtos span {
@@ -211,23 +247,14 @@ header {
     font-family: var(--fonteterciaria);
 }
 
-.produtos button {
-    background: none;
-    border: none;
-    outline: none;
-    box-shadow: none;
-    cursor: pointer;
-    padding: 0;
-    font: inherit;
-}
-
 
 /* ------------------footer------------------- */
 
 footer {
-    background-color: #FFF7E6;
+    background-color: var(--creme);
     display: flex;
     justify-content: center;
+    font-family: var(--fontehanken);
 }
 
 
@@ -236,16 +263,9 @@ footer {
     justify-content: space-between;
     align-items: center;
     max-width: 1300px;
-    width: 100%;
-
+    width: 95%;
 }
 
-
-
-.footer_container img {
-    width: 250px;
-    max-width: 100%;
-}
 
 
 .footer_nav a {
@@ -265,60 +285,43 @@ footer {
 
 @media screen and (max-width: 768px) {
 
-
-
-    .logo{
-        max-width: 180px;
-        min-width: 100px;
+    .logo {
+        height: 90px;
     }
 
-    .box_busca input{
+    .box_busca input {
         max-width: 150px;
         width: 100%;
     }
 
     .header_container {
-        display: flex;
-        justify-content: space-between;
-        max-width: 1300px;
         width: 90%;
-        margin: 0 auto;
     }
 
-    .header_txt2{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
+    .header_txt2 {
         align-items: center;
-        /* gap: 16px; */
     }
 
-    .header_txt2 img{
-        max-width: 60px;
-        min-width: 40px;
-        width: 80%;
+    .header_txt2 img {
+        width: 40px;
     }
 
 
     /* -------------------banner---------------- */
 
     .texto_banner {
-        height: auto;
-
+        gap: 15px;
     }
 
     .texto_banner h1 {
         font-size: 40px;
-        margin-bottom: 20px;
     }
 
     .texto_banner p {
         font-size: 22px;
-        margin-bottom: 15px;
     }
 
     .texto_banner .botao_colecao {
-        max-width: 200px;
         font-size: 18px;
     }
 
@@ -326,6 +329,11 @@ footer {
         width: 100%;
         height: auto;
         display: block;
+        margin-bottom: 20px;
+    }
+
+    .sessoes {
+        margin-left: 20px;
         margin-bottom: 40px;
     }
 
@@ -333,16 +341,15 @@ footer {
     /* ---------------------section novidades-------------------- */
 
     .container_produtos {
-        display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 30px;
     }
 
-    .produtos button {
+    .produtos a {
         max-width: 300px;
         min-width: 180px;
-
     }
 
 
@@ -354,15 +361,7 @@ footer {
         width: 100%;
     }
 
-
-    .logo {
-        max-width: 180px;
-        min-width: 100px;
-        width: 100%;
-    }
-
-
-    .footer_nav{
+    .footer_nav {
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -372,49 +371,50 @@ footer {
 /* ----------------media 500px correção de quebras------------- */
 
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px) {
 
-    
-    .logo{
-        max-width: 160px;
-        min-width: 140px;
-    }
-    
-    .header_txt2 img{
-        display: none;
+    .logo {
+        height: 70px;
     }
 
-/* ----------------banner------------------ */
-    .texto_banner{
+    .box_busca input {
+        max-width: 120px;
+    }
+
+    /* os icones ficam menores em vez de sumir */
+    .header_txt2 img {
+        width: 30px;
+    }
+
+    /* ----------------banner------------------ */
+    .texto_banner {
         max-width: 500px;
         width: 70%;
     }
 
 
-    .container_txtnovidades h2{
+    .container_txtnovidades h2 {
         font-size: 36px;
     }
 
-      .container_txtnovidades hr{
+    .container_txtnovidades hr {
         width: 60%;
-      }
-
-
-      /* ---------------footer-------------- */
-
-    .footer_container img{
-        max-width: 160px;
-        min-width: 120px;
     }
 
-    .footer_container{
-        display: flex;
+
+    /* ---------------footer-------------- */
+
+    .footer_container img {
+        height: 60px;
+    }
+
+    .footer_container {
         justify-content: space-evenly;
         max-width: 400px;
         min-width: 300px;
     }
-    
-    .footer_nav a{
+
+    .footer_nav a {
         font-size: 14px;
     }
 }
